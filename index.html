@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Star Runner: Trench Fire</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script defer src="./game.js"></script>
+  </head>
+  <body>
+    <main class="game-shell" aria-label="Star Runner: Trench Fire">
+      <canvas id="gameCanvas"></canvas>
+
+      <section class="hud" aria-live="polite">
+        <div class="hud-group">
+          <span class="hud-label">SCORE</span>
+          <strong id="scoreValue">000000</strong>
+        </div>
+        <div class="hud-group">
+          <span class="hud-label">SHIELD</span>
+          <div id="shieldPips" class="shield-pips" aria-label="shield"></div>
+        </div>
+        <div class="hud-group">
+          <span class="hud-label">WAVE</span>
+          <strong id="waveValue">01</strong>
+        </div>
+      </section>
+
+      <div class="corner-controls">
+        <button id="soundButton" class="icon-button" type="button" aria-label="sound">♪</button>
+        <button id="pauseButton" class="icon-button" type="button" aria-label="pause">Ⅱ</button>
+      </div>
+
+      <section id="startOverlay" class="overlay active">
+        <div class="title-lockup">
+          <p class="eyebrow">ORIGINAL SPACE OPERA SHOOTER</p>
+          <h1>STAR RUNNER</h1>
+          <p class="subtitle">TRENCH FIRE</p>
+          <button id="startButton" class="primary-button" type="button">SORTIE</button>
+        </div>
+      </section>
+
+      <section id="messageOverlay" class="overlay message-only" hidden>
+        <div class="message-panel">
+          <h2 id="messageTitle">PAUSED</h2>
+          <p id="messageBody">READY</p>
+          <button id="resumeButton" class="primary-button" type="button">RESUME</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
